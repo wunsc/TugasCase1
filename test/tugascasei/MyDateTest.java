@@ -48,7 +48,7 @@ public class MyDateTest {
         assertTrue(md.validasiTahun(thn));
     }
     
-    @Test
+    @Test (expected = HandlingE.class)
     public void testValidasiTahunFalse1() throws Exception, HandlingE {
         System.out.println("validasiTahunFalse1");
         int thn = 900;
@@ -56,7 +56,7 @@ public class MyDateTest {
         assertFalse(mdf1.validasiTahun(thn));
     }
     
-    @Test
+    @Test (expected = HandlingE.class)
     public void testValidasiTahunFalse2() throws Exception, HandlingE {
         System.out.println("validasiTahunFalse2");
         int thn = 10000;
@@ -72,10 +72,10 @@ public class MyDateTest {
         System.out.println("validasiBulanTrue");
         int bln = 3;
         MyDate mdbt = new MyDate();
-        assertTrue(mdbt.validasiBulan(bln));
+        assert(mdbt.validasiBulan(bln));
     }
     
-    @Test
+    @Test (expected = HandlingE.class)
     public void testValidasiBulanFalse1() throws Exception, HandlingE {
         System.out.println("validasiBulanFalse1");
         int bln = -1;
@@ -83,7 +83,7 @@ public class MyDateTest {
         assertFalse(mdbf1.validasiBulan(bln));
     }
     
-    @Test
+    @Test (expected = HandlingE.class)
     public void testValidasiBulanFalse2() throws Exception, HandlingE {
         System.out.println("validasiBulanFalse2");
         int bln = 15;
@@ -94,7 +94,7 @@ public class MyDateTest {
     /**
      * Test of validasiHari method, of class MyDate.
      */
-    @Test
+    @Test 
     public void testValidasiHariTrue() throws Exception, HandlingE {
         System.out.println("validasiHariTrue");
         int thn = 2000;
@@ -104,7 +104,7 @@ public class MyDateTest {
         assertTrue(mdht.validasiHari(thn,bln,hari));
     }
     
-    @Test
+    @Test (expected = HandlingE.class)
     public void testValidasiHariFalse1() throws Exception, HandlingE {
         System.out.println("validasiHariFalse1");
         int thn = 1800;
@@ -114,7 +114,7 @@ public class MyDateTest {
         assertFalse(mdht.validasiHari(thn,bln,hari));
     }
     
-    @Test
+    @Test (expected = HandlingE.class)
     public void testValidasiHariFalse2() throws Exception, HandlingE {
         System.out.println("validasiHariFalse2");
         int thn = 3900;
@@ -135,5 +135,4 @@ public class MyDateTest {
         String result = instance.toString();
         assertEquals(expResult, result);
     }
-    
 }
