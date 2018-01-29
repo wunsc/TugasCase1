@@ -18,6 +18,7 @@ import java.util.logging.Logger;
 public class DateCalc extends javax.swing.JFrame {
 
     List<MyDate> obdat = new ArrayList<>();
+    MyDate mdt = new MyDate();
     long selisih_hari;
 
     /**
@@ -207,7 +208,9 @@ public class DateCalc extends javax.swing.JFrame {
         int blnaw = Integer.valueOf(txBlnAw.getText());
         int hariaw = Integer.valueOf(txHariAw.getText());
         try {
-            obdat.add(new MyDate(hariaw, blnaw, thnaw));
+            if(mdt.validasiHari(thnaw, blnaw, hariaw)){
+                obdat.add(new MyDate(hariaw, blnaw, thnaw));
+            }
         } catch (HandlingE ex) {
             System.out.println(ex.getMessage());
             obdat.removeAll(obdat);
@@ -228,7 +231,9 @@ public class DateCalc extends javax.swing.JFrame {
         int blnak = Integer.valueOf(txBlnAk.getText());
         int hariak = Integer.valueOf(txHariAk.getText());
         try {
-            obdat.add(new MyDate(hariak, blnak, thnak));
+            if(mdt.validasiHari(thnak, blnak, hariak)){
+                obdat.add(new MyDate(hariak, blnak, thnak));
+            }
         } catch (HandlingE ex) {
             System.out.println(ex.getMessage());
             obdat.removeAll(obdat);
