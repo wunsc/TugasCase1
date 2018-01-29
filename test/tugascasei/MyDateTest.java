@@ -72,7 +72,7 @@ public class MyDateTest {
         System.out.println("validasiBulanTrue");
         int bln = 3;
         MyDate mdbt = new MyDate();
-        assert(mdbt.validasiBulan(bln));
+        assertTrue(mdbt.validasiBulan(bln));
     }
     
     @Test (expected = HandlingE.class)
@@ -87,8 +87,8 @@ public class MyDateTest {
     public void testValidasiBulanFalse2() throws Exception, HandlingE {
         System.out.println("validasiBulanFalse2");
         int bln = 15;
-        MyDate mdbf3 = new MyDate();
-        assertFalse(mdbf3.validasiBulan(bln));
+        MyDate mdbf2 = new MyDate();
+        assertFalse(mdbf2.validasiBulan(bln));
     }
 
     /**
@@ -110,8 +110,8 @@ public class MyDateTest {
         int thn = 1800;
         int bln = -1;
         int hari = 13;
-        MyDate mdht = new MyDate();
-        assertFalse(mdht.validasiHari(thn,bln,hari));
+        MyDate mdhtf1 = new MyDate();
+        assertFalse(mdhtf1.validasiHari(thn,bln,hari));
     }
     
     @Test (expected = HandlingE.class)
@@ -120,8 +120,8 @@ public class MyDateTest {
         int thn = 3900;
         int bln = 11;
         int hari = 31;
-        MyDate mdht = new MyDate();
-        assertFalse(mdht.validasiHari(thn,bln,hari));
+        MyDate mdhtf2 = new MyDate();
+        assertFalse(mdhtf2.validasiHari(thn,bln,hari));
     }
 
     /**
