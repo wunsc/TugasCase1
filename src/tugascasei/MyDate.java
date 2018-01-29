@@ -27,16 +27,16 @@ public class MyDate {
 
     public boolean validasiTahun(int thn) throws HandlingE {
         if (thn < 1970 || thn > 9999) {
-//            throw new HandlingE("input tahun salah");
-            return false;
+            throw new HandlingE("input tahun salah");
+//            return false;
         }
         return true;
     }
 
     public boolean validasiBulan(int bln) throws HandlingE {
         if (bln < 0 || bln > 12) {
-//            throw new HandlingE("input bulan salah, 1-12");
-              return false;
+            throw new HandlingE("input bulan salah, 1-12");
+//              return false;
         }
         return true;
     }
@@ -47,28 +47,28 @@ public class MyDate {
                 case 1: case 3: case 5: case 7: case 8: case 10:
                 case 12:
                     if (hari > 31) {
-//                        throw new HandlingE("input hari salah, 1-31");
-                          return false;
+                        throw new HandlingE("input hari salah, 1-31");
+//                          return false;
                     }
                     return true;
                 case 4: case 6: case 9:
                 case 11:
                     if (hari > 30) {
-//                        throw new HandlingE("input hari salah, 1-30");
-                        return false;
+                        throw new HandlingE("input hari salah, 1-30");
+//                        return false;
                     }
                     return true;
                 case 2:
                     if (thn % 4 == 0) {
                         if (hari > 29) {
-//                            throw new HandlingE("input hari salah, 1-29");
-                            return false;
+                            throw new HandlingE("input hari salah, 1-29");
+//                            return false;
                         }
                         return true;
                     } else {
                         if (hari > 28) {
-//                            throw new HandlingE("input hari salah, 1-28");
-                            return false;
+                            throw new HandlingE("input hari salah, 1-28");
+//                            return false;
                         }
                         return true;
                     }

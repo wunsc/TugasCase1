@@ -61,7 +61,6 @@ public class Main {
                 selisih_hari = dc.Comparator(obdat.get(j), obdat.get(j+1));
                 System.out.println("Selisih Hari: " + selisih_hari);
             } catch (ParseException ex) {
-                //Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
                 System.out.println(ex.getMessage());
             }
         }
