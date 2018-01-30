@@ -7,6 +7,7 @@ package tugascasei;
 
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -29,16 +30,20 @@ public class Main {
         int i = 1;
         System.out.println("Tanggal Awal");
         while (i <= 2) {
-            System.out.print("Tanggal: ");
-            int tgl = sc.nextInt();
-            System.out.print("Bulan: ");
-            int bln = sc.nextInt();
-            System.out.print("Tahun: ");
-            int thn = sc.nextInt();
             try {
-                if (md.validasiHari(thn, bln, tgl)){
+                System.out.print("Tanggal: ");
+                int tgl = sc.nextInt();
+                System.out.print("Bulan: ");
+                int bln = sc.nextInt();
+                System.out.print("Tahun: ");
+                int thn = sc.nextInt();
+            
+                if (md.validasi(thn, bln, tgl)){
                     obdat.add(new MyDate(tgl, bln, thn));
                 }
+            } catch (InputMismatchException im){
+                System.out.println("input harus integer");
+                break;
             } catch (HandlingE ex) {
                 System.out.println(ex.getMessage());
                 obdat.removeAll(obdat);

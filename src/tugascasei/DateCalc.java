@@ -204,13 +204,17 @@ public class DateCalc extends javax.swing.JFrame {
 
     private void txThnAwActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txThnAwActionPerformed
         // TODO add your handling code here:
-        int thnaw = Integer.valueOf(txThnAw.getText());
-        int blnaw = Integer.valueOf(txBlnAw.getText());
-        int hariaw = Integer.valueOf(txHariAw.getText());
         try {
-            if(mdt.validasiHari(thnaw, blnaw, hariaw)){
+            int thnaw = Integer.valueOf(txThnAw.getText());
+            int blnaw = Integer.valueOf(txBlnAw.getText());
+            int hariaw = Integer.valueOf(txHariAw.getText());
+        
+            if(mdt.validasi(thnaw, blnaw, hariaw)){
                 obdat.add(new MyDate(hariaw, blnaw, thnaw));
+                System.out.println("object tanggal awal berhasil dibuat");
             }
+        } catch (NumberFormatException nm){
+            System.out.println("input harus integer");
         } catch (HandlingE ex) {
             System.out.println(ex.getMessage());
             obdat.removeAll(obdat);
@@ -227,12 +231,14 @@ public class DateCalc extends javax.swing.JFrame {
 
     private void txThnAkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txThnAkActionPerformed
         // TODO add your handling code here:
-        int thnak = Integer.valueOf(txThnAk.getText());
-        int blnak = Integer.valueOf(txBlnAk.getText());
-        int hariak = Integer.valueOf(txHariAk.getText());
         try {
-            if(mdt.validasiHari(thnak, blnak, hariak)){
+            int thnak = Integer.valueOf(txThnAk.getText());
+            int blnak = Integer.valueOf(txBlnAk.getText());
+            int hariak = Integer.valueOf(txHariAk.getText());
+        
+            if(mdt.validasi(thnak, blnak, hariak)){
                 obdat.add(new MyDate(hariak, blnak, thnak));
+                System.out.println("object tanggal awal berhasil dibuat");
             }
         } catch (HandlingE ex) {
             System.out.println(ex.getMessage());

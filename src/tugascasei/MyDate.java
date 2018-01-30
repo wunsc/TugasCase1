@@ -39,30 +39,30 @@ public class MyDate {
         return true;
     }
 
-    public boolean validasiHari(int thn, int bln, int hari) throws HandlingE {
+    public boolean validasi(int thn, int bln, int hari) throws HandlingE {
         if (validasiTahun(thn) & validasiBulan(bln)) {
             switch (bln) {
                 case 1: case 3: case 5: case 7: case 8: case 10:
                 case 12:
                     if (hari > 31) {
-                        throw new HandlingE("input hari salah, 1-31");
+                        throw new HandlingE("input tanggal salah, 1-31");
                     }
                     return true;
                 case 4: case 6: case 9:
                 case 11:
                     if (hari > 30) {
-                        throw new HandlingE("input hari salah, 1-30");
+                        throw new HandlingE("input tanggal salah, 1-30");
                     }
                     return true;
                 case 2:
                     if (thn % 4 == 0) {
                         if (hari > 29) {
-                            throw new HandlingE("input hari salah, 1-29");
+                            throw new HandlingE("input tanggal salah, 1-29");
                         }
                         return true;
                     } else {
                         if (hari > 28) {
-                            throw new HandlingE("input hari salah, 1-28");
+                            throw new HandlingE("input tanggal salah, 1-28");
                         }
                         return true;
                     }

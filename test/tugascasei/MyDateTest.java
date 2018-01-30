@@ -95,33 +95,33 @@ public class MyDateTest {
      * Test of validasiHari method, of class MyDate.
      */
     @Test 
-    public void testValidasiHariTrue() throws Exception, HandlingE {
-        System.out.println("validasiHariTrue");
+    public void testValidasiTrue() throws Exception, HandlingE {
+        System.out.println("validasiTrue");
         int thn = 2000;
         int bln = 11;
         int hari = 13;
         MyDate mdht = new MyDate();
-        assertTrue(mdht.validasiHari(thn,bln,hari));
+        assertTrue(mdht.validasi(thn,bln,hari));
     }
     
     @Test (expected = HandlingE.class)
-    public void testValidasiHariFalse1() throws Exception, HandlingE {
-        System.out.println("validasiHariFalse1");
+    public void testValidasiFalse1() throws Exception, HandlingE {
+        System.out.println("validasiFalse1");
         int thn = 1800;
         int bln = -1;
         int hari = 13;
         MyDate mdhtf1 = new MyDate();
-        assertFalse(mdhtf1.validasiHari(thn,bln,hari));
+        assertFalse(mdhtf1.validasi(thn,bln,hari));
     }
     
     @Test (expected = HandlingE.class)
-    public void testValidasiHariFalse2() throws Exception, HandlingE {
-        System.out.println("validasiHariFalse2");
+    public void testValidasiFalse2() throws Exception, HandlingE {
+        System.out.println("validasiFalse2");
         int thn = 3900;
         int bln = 11;
         int hari = 31;
         MyDate mdhtf2 = new MyDate();
-        assertFalse(mdhtf2.validasiHari(thn,bln,hari));
+        assertFalse(mdhtf2.validasi(thn,bln,hari));
     }
 
     /**
