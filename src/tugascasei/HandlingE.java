@@ -5,12 +5,17 @@
  */
 package tugascasei;
 
-/**
+/** @brief Custom Exception class 
  *
  * @author MuhammadTaufik
+ * @date January 2018
  */
-public class HandlingE extends Throwable{
+public class HandlingE extends Exception{
     
+    /**
+     * Constructor membuat custom handle an exception
+     * @param mes 
+     */
     public HandlingE(String mes){
         super(mes);
     }

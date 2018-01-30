@@ -5,41 +5,78 @@
  */
 package tugascasei;
 
-/**
+/** @brief MyDate class
  *
  * @author MuhammadTaufik
+ * @date January 2018
  */
 public class MyDate {
 
-    int hari;
-    int bln;
-    int thn;
+    private int hari; /**< initial tanggal */
+    private int bln; /**< initial bulan */
+    private int thn; /**< initial tahun */
     
+    /**
+     * Default constructor. Untuk create object pemanggilan method validasi
+     */
     public MyDate(){
         
     }
     
+    /**
+     * Constructor with param. Untuk create object tanggal awal dan tanggal akhir
+     * @param hari parameter tanggal
+     * @param bln parameter bulan
+     * @param thn parameter tahun
+     * @throws HandlingE 
+     */
     public MyDate(int hari, int bln, int thn) throws HandlingE {
         this.thn = thn;
         this.bln = bln;
         this.hari = hari;
     }
-
+    
+    /**
+     * Method validasi tahun untuk pengecekan input tahun antara 1970 sampai 9999,
+     * dan akan throws jika input salah
+     * @param thn parameter tahun
+     * @return boolean
+     * @throws HandlingE 
+     */
     public boolean validasiTahun(int thn) throws HandlingE {
         if (thn < 1970 || thn > 9999) {
             throw new HandlingE("input tahun salah");
         }
         return true;
     }
-
+    
+    /**
+     * Method validasi bulan untuk pengecekan input bulan antara 1 sampai 12,
+     * dan akan throws jika input bulan salah
+     * @param bln parameter bulan
+     * @return boolean
+     * @throws HandlingE 
+     */
     public boolean validasiBulan(int bln) throws HandlingE {
-        if (bln < 0 || bln > 12) {
+        if (bln < 1 || bln > 12) {
             throw new HandlingE("input bulan salah, 1-12");
         }
         return true;
     }
-
+    
+    /**
+     * Method validasi, untuk pengecekan input tanggal dengan memerlukan parameter input tahun dan bulan,
+     * dan akan throws jika input salah
+     * @param thn parameter tahun
+     * @param bln parameter bulan
+     * @param hari parameter tanggal
+     * @return boolean
+     * @throws HandlingE 
+     */
     public boolean validasi(int thn, int bln, int hari) throws HandlingE {
+        /**
+         * 
+         */
         if (validasiTahun(thn) & validasiBulan(bln)) {
             switch (bln) {
                 case 1: case 3: case 5: case 7: case 8: case 10:
@@ -74,7 +111,11 @@ public class MyDate {
         }
         return false;
     }
-
+    
+    /**
+     * Method untuk Builder String dari masing-masing parameter hari, bulan dan tahun
+     * @return String
+     */
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
