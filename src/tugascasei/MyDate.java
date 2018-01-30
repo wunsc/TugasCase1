@@ -25,10 +25,10 @@ public class MyDate {
     
     /**
      * Constructor with param. Untuk create object tanggal awal dan tanggal akhir
-     * @param hari parameter tanggal
-     * @param bln parameter bulan
-     * @param thn parameter tahun
-     * @throws HandlingE 
+     * @param hari parameter tanggal, tipe data integer
+     * @param bln parameter bulan, tipe data integer
+     * @param thn parameter tahun, tipe data integer
+     * @throws HandlingE custom handle exception dari class HandlingE
      */
     public MyDate(int hari, int bln, int thn) throws HandlingE {
         this.thn = thn;
@@ -39,9 +39,9 @@ public class MyDate {
     /**
      * Method validasi tahun untuk pengecekan input tahun antara 1970 sampai 9999,
      * dan akan throws jika input salah
-     * @param thn parameter tahun
+     * @param thn parameter tahun, tipe data integer
      * @return boolean
-     * @throws HandlingE 
+     * @throws HandlingE custom exception dari class HandlingE
      */
     public boolean validasiTahun(int thn) throws HandlingE {
         if (thn < 1970 || thn > 9999) {
@@ -53,9 +53,9 @@ public class MyDate {
     /**
      * Method validasi bulan untuk pengecekan input bulan antara 1 sampai 12,
      * dan akan throws jika input bulan salah
-     * @param bln parameter bulan
+     * @param bln parameter bulan, tipe data integer
      * @return boolean
-     * @throws HandlingE 
+     * @throws HandlingE custom exception dari class HandlingE
      */
     public boolean validasiBulan(int bln) throws HandlingE {
         if (bln < 1 || bln > 12) {
@@ -67,11 +67,11 @@ public class MyDate {
     /**
      * Method validasi, untuk pengecekan input tanggal dengan memerlukan parameter input tahun dan bulan,
      * dan akan throws jika input salah
-     * @param thn parameter tahun
-     * @param bln parameter bulan
-     * @param hari parameter tanggal
+     * @param thn parameter tahun, tipe data integer
+     * @param bln parameter bulan, tipe data integer
+     * @param hari parameter tanggal, tipe data integer
      * @return boolean
-     * @throws HandlingE 
+     * @throws HandlingE custom exception dari class HandlingE
      */
     public boolean validasi(int thn, int bln, int hari) throws HandlingE {
         /**

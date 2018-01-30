@@ -14,7 +14,7 @@ public class HandlingE extends Exception{
     
     /**
      * Constructor membuat custom handle an exception
-     * @param mes 
+     * @param mes parameter pesan, tipe data String
      */
     public HandlingE(String mes){
         super(mes);

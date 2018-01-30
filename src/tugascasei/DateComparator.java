@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  *
- * @author MuhammadTaufik
+ * @author Muhammad Taufik Rah
  */
 public class DateComparator {
 
@@ -23,9 +23,9 @@ public class DateComparator {
 
     /**
      * Method kalkulasi selisih hari antara dua object (tanggal awal, tanggal akhir)
-     * @param awal parameter object tanggal awal dari arraylist
-     * @param akhir parameter object tanggal akhir arraylist
-     * @return value hari yang merupakan selisih hari antara dua object
+     * @param awal parameter object tanggal awal atau arraylist index ke-0
+     * @param akhir parameter object tanggal akhir atau arraylist index ke-1
+     * @return value hari yang merupakan selisih hari antara dua object tipe data long
      * @throws ParseException 
      */
     public long Comparator(Object awal, Object akhir) throws ParseException {
