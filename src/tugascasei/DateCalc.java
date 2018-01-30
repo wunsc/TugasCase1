@@ -239,7 +239,7 @@ public class DateCalc extends javax.swing.JFrame {
         
             if(mdt.validasi(thnak, blnak, hariak)){
                 obdat.add(new MyDate(hariak, blnak, thnak));
-                System.out.println("object tanggal awal berhasil dibuat");
+                System.out.println("object tanggal akhir berhasil dibuat");
             }
         } catch (HandlingE ex) {
             System.out.println(ex.getMessage());
