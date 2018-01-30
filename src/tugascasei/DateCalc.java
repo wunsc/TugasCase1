@@ -13,7 +13,8 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author MuhammadTaufik
+ * @author Muhammad Taufik Rahman
+ * @date January 2018
  */
 public class DateCalc extends javax.swing.JFrame {
 

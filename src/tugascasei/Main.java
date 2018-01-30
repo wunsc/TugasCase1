@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author MuhammadTaufik
+ * @author Muhammad Taufik Rahman
  */
 public class Main {
 

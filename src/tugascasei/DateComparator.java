@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  *
- * @author Muhammad Taufik Rah
+ * @author Muhammad Taufik Rahman
  */
 public class DateComparator {
 

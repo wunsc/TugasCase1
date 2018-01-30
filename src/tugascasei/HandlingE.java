@@ -7,7 +7,7 @@ package tugascasei;
 
 /** @brief Custom Exception class 
  *
- * @author MuhammadTaufik
+ * @author Muhammad Taufik Rahman
  * @date January 2018
  */
 public class HandlingE extends Exception{
