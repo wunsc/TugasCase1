@@ -19,7 +19,7 @@ public class DateComparator {
     private long hari; // /**< initial untuk menyimpan value selisih hari */
 
     /**
-     * Method kalkulasi selisih hari antara dua object (MyDate awal, MyDate akhir)
+     * Method kalkulasi selisih hari antara dua object (awal, akhir)
      * @param awal merupakan object MyDate.class
      * @param akhir merupakan object MyDate.class
      * @return value selisih hari dengan tipe data long dari formula miliseconds -> days
