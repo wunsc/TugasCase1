@@ -12,23 +12,23 @@ package tugascasei;
  */
 public class MyDate {
 
-    private int hari; /**< initial tanggal */
-    private int bln; /**< initial bulan */
-    private int thn; /**< initial tahun */
+    private int hari; // initial tanggal
+    private int bln; // initial bulan
+    private int thn; // initial tahun
     
     /**
-     * Default constructor. Untuk create object pemanggilan method validasi
+     * Mengalokasikan object MyDate dan initializes sehingga dapat memanggil method-nya
      */
     public MyDate(){
         
     }
     
     /**
-     * Constructor with param. Untuk create object tanggal awal dan tanggal akhir
-     * @param hari parameter tanggal, tipe data integer
-     * @param bln parameter bulan, tipe data integer
-     * @param thn parameter tahun, tipe data integer
-     * @throws HandlingE custom handle exception dari class HandlingE
+     * Mengalokasikan object MyDate dan initializes dengan spesifik tanggal, bulan dan tahun
+     * @param hari merupakan parameter untuk tanggal, tipe data integer
+     * @param bln merupakan parameter untuk bulan, tipe data integer
+     * @param thn merupakan parameter untuk tahun, tipe data integer
+     * @throws HandlingE merupakan custom handle exception untuk signals error ketika terjadi kesalahan dalam input 
      */
     public MyDate(int hari, int bln, int thn) throws HandlingE {
         this.thn = thn;
@@ -37,11 +37,10 @@ public class MyDate {
     }
     
     /**
-     * Method validasi tahun untuk pengecekan input tahun antara 1970 sampai 9999,
-     * dan akan throws jika input salah
-     * @param thn parameter tahun, tipe data integer
-     * @return boolean
-     * @throws HandlingE custom exception dari class HandlingE
+     * Merupakan method untuk validasi tahun ketika input value tahun yang mana harus di antara 1970 sampai 9999
+     * @param thn merupakan parameter untuk tahun, tipe data integer
+     * @return boolean, false akan di-throws
+     * @throws HandlingE merupakan custom handle exception untuk signals error ketika terjadi kesalahan dalam input tahun
      */
     public boolean validasiTahun(int thn) throws HandlingE {
         if (thn < 1970 || thn > 9999) {
@@ -51,11 +50,10 @@ public class MyDate {
     }
     
     /**
-     * Method validasi bulan untuk pengecekan input bulan antara 1 sampai 12,
-     * dan akan throws jika input bulan salah
-     * @param bln parameter bulan, tipe data integer
-     * @return boolean
-     * @throws HandlingE custom exception dari class HandlingE
+     * Merupakan method untuk validasi bulan ketika input value bulan yang mana harus di antara 1 sampai 12
+     * @param bln merupakan parameter untuk bulan, tipe data integer
+     * @return boolean, false akan di-throws
+     * @throws HandlingE merupakan custom handle exception untuk signals error ketika terjadi kesalahan dalam input bulan
      */
     public boolean validasiBulan(int bln) throws HandlingE {
         if (bln < 1 || bln > 12) {
@@ -65,18 +63,14 @@ public class MyDate {
     }
     
     /**
-     * Method validasi, untuk pengecekan input tanggal dengan memerlukan parameter input tahun dan bulan,
-     * dan akan throws jika input salah
-     * @param thn parameter tahun, tipe data integer
-     * @param bln parameter bulan, tipe data integer
-     * @param hari parameter tanggal, tipe data integer
-     * @return boolean
-     * @throws HandlingE custom exception dari class HandlingE
+     * Merupakan method untuk validasi tanggal ketika input value tanggal yang mana harus menyesuaikan dengan value tahun dan bulan
+     * @param thn merupakan parameter untuk tahun, tipe data integer. Validasi mengambil method validasiTahun(thn)
+     * @param bln merupakan parameter untuk bulan, tipe data integer. Validasi mengambil method validasiBulan(bln)
+     * @param hari merupakan parameter untuk tanggal, tipe data integer
+     * @return boolean, false akan di-throws
+     * @throws HandlingE merupakan custom handle exception untuk signals error ketika terjadi kesalahan dalam input tanggal
      */
     public boolean validasi(int thn, int bln, int hari) throws HandlingE {
-        /**
-         * 
-         */
         if (validasiTahun(thn) & validasiBulan(bln)) {
             switch (bln) {
                 case 1: case 3: case 5: case 7: case 8: case 10:
@@ -113,8 +107,8 @@ public class MyDate {
     }
     
     /**
-     * Method untuk Builder String dari masing-masing parameter hari, bulan dan tahun
-     * @return String
+     * Merupakan method untuk Builder String atau menggabungkan dari masing-masing parameter hari, bulan dan tahun dipisahkan dengan "-"
+     * @return String -> hari-bulan-tahun
      */
     @Override
     public String toString() {

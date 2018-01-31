@@ -13,8 +13,8 @@ package tugascasei;
 public class HandlingE extends Exception{
     
     /**
-     * Constructor membuat custom handle an exception
-     * @param mes parameter pesan, tipe data String
+     * Construct HandlingE dengan spesifik pesan yang telah ditentukan
+     * @param mes merupakan parameter untuk spesifik pesan, tipe data String
      */
     public HandlingE(String mes){
         super(mes);
