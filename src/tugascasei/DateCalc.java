@@ -241,6 +241,8 @@ public class DateCalc extends javax.swing.JFrame {
                 obdat.add(new MyDate(hariak, blnak, thnak));
                 System.out.println("object tanggal akhir berhasil dibuat");
             }
+        } catch (NumberFormatException nm){
+            System.out.println("input harus integer");
         } catch (HandlingE ex) {
             System.out.println(ex.getMessage());
             obdat.removeAll(obdat);
