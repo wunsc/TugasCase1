@@ -16,7 +16,7 @@ import java.util.Date;
  */
 public class DateComparator {
 
-    private long hari; // /**< initial untuk menyimpan value selisih hari */
+    private long hari; // initial untuk menyimpan value selisih hari
 
     /**
      * Method kalkulasi selisih hari antara dua object (awal, akhir)
